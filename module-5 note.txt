@@ -1,0 +1,131 @@
+        
+        Module 5 - NODE AND EXPRESS
+        ---------------------------
+
+MVC ARCHITECTURE
+----------------
+M - Model 
+V - View
+C - Controller
+
+components of MVC
+-----------------
+1) View (frontend) -send request
+2) Routing - set the path to resolve the request
+3) Controller - resolve the request 
+4) Model - structure in which data to be stored in database
+5) database - store the data.
+
+NODE
+----
+- not a pgming language.
+- it provides a runtime environment for javascript to run outside the browser.
+- file extension - .js 
+
+EXPRESS
+-------
+- framework of node 
+- there have different predefined methods . by using this methods we can create server
+
+
+Node Modules
+------------
+- modules are files/javascript library that can be used in node.js application to provide specific functionalities.
+- import - require keyword
+- export - module.exports
+
+
+Types of modules
+----------------
+1) Custom modules
+2) BuildIn modules
+
+Different types of BuildIn modules
+----------------------------------
+1) file system modules
+   - it allows us to work with files inside file system on your computer/programs files
+   - they performs various operations like reading writing creating and deleting files.
+   
+import - require('fs')
+
+common uses
+-----------
+1) read files - fs.readFile()
+2) create file - fs.open()
+3) write - fs.writeFile()
+4) delete - fs.unlink()
+
+
+2) http module
+   ------------
+- it allows node.js to transfer data over http request
+- it can create http server that listen to server ports and gives response back to the client
+- method - createServer() - http server
+- method - listen() - (to set a port inside listen())
+
+3) https module
+   ------------
+
+4) Event Module
+   ------------
+- to generate events
+- based on EventEmitter()
+- object of that particular class
+- on() method is used to create events 
+- emit method is used to execute the events
+
+
+global object
+-------------
+- it provides global variables and functions that are available through out the node js application.(global scope)
+ 
+ examples
+ 1) console - console.log - display content
+ 2) setTimeOut (for time delay) ,setInterval (regular intervel) 
+ 3) clearTimeOut ,clearInterval
+
+
+ environment variables
+ ---------------------
+ - these are predefined variable or values that are typically used to provide the ability to configure a value in your code from outside of your application
+ - provides information about the environment in which the process is running
+ 
+express
+-------
+- framework of node.js
+
+steps to create express server
+------------------------------
+1) npm init -y - install package.json
+   - edit the script key
+   - index.js is the only file that runs at the backend
+   - start - index.js
+   
+2) npm install dotenv cors express mongoose
+        - express - to create server
+        - dotenv - to load environmental variables from .env file(which have environmental variables)
+        - cors - cross origin resource sharing - to communicate between frontend and backend(to connect frontend and backend)
+        - mongoose - to connect server and database.
+3) .env file - to hold environmental variables
+4) create .gitignore file - files that have to be ignore while pushing to git.
+      * node_modules - it is a big file so we haven't push into git
+      * .env - while hosting the website we have to provide the environmental variables. so no need to push .env file into git.
+5) create index.js file.
+
+   steps in index.js 
+   -----------------
+   1)import dotenv module.
+   2) import express
+   3) import cors
+   4) create server
+   5) use cors by server
+   6) convert json into javascript object
+   7) set port - (to avoid the clash if both frontend and backend works in a same port.so set a different port to backend)
+   8) run server
+
+   CRUD OPERATIONS
+   ---------------
+   C - create -POST
+   R - read -GET
+   U - Update -PUT
+   D - Delete -DELETE
